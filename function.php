@@ -4,18 +4,18 @@
  * @time: 2017.07.07
  * @email: LycanCoder@gmail.com
  * @check_email($str)									验证邮箱
- * @check_url($str)										验证网址
+ * @check_url($str)									验证网址
  * @check_chinese_character($string)					是否含有汉字
- * @check_invalide_str($string)							是否含有非法字符
+ * @check_invalide_str($string)						是否含有非法字符
  * @check_post_num($num)								邮证编码
  * @check_personal_card($num)							身份证号码
  * @check_ip($str)										验证IP地址
  * @check_book_isbn($str)								出版物的ISBN号
  * @check_mobile($num)									手机号码(中国大陆区)
- * @check_str_null($string)								字符串是否为空
- * @check_length($string,$min,$max)						字符串长度
+ * @check_str_null($string)							字符串是否为空
+ * @check_length($string,$min,$max)					字符串长度
  * @send_email($to,$name,$subject,$body,$attachment)	发送电子邮件验证
- * @send_email_verify($tel)								发送电话验证
+ * @send_email_verify($tel)							发送电话验证
  * @xml_to_array($xml)									xml转换成数组
  */
 
