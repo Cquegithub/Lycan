@@ -1,2 +1,2 @@
 # Lycan
-个人资源整理
+Personal resource finishing
