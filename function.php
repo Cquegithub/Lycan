@@ -297,13 +297,13 @@ function curl($url = '', $params = '', $method = 'POST', $head = array(), $https
 	curl_setopt($ch, CURLOPT_POSTFIELDS, $params);		// POST请求内容(string/关联array)
 	curl_setopt($ch, CURLOPT_HTTPHEADER, $head);		// 请求报头(非关联array)
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);		// 返回内容处理(false直接输出)
-	//是否为https请求
+	// 是否为https请求
 	if($https){
 	    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);	// 连接地址验证SSL证书
 	    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);	// 验证服务器SSL证书
 	}
 	$result = curl_exec($ch); // 开始访问指定URL
 	$result = json_decode($result, true);
-	curl_close($ch);
+	curl_close($ch); //关闭curl 释放资源
 	return $result;
 }
