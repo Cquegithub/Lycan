@@ -15,7 +15,7 @@
  * @check_str_null()		字符串是否为空
  * @check_length()		字符串长度
  * @send_email()		发送电子邮件验证
- * @send_email_verify()		发送电话验证
+ * @send_tel()			发送手机短信验证
  * @xml_to_array()		xml转换成数组
  * @curl()			http访问
  */
@@ -271,13 +271,13 @@ function send_email($to, $name, $subject = '', $body = '', $attachment = null) {
 }
 
 /*
- * 电子邮件发送方法
+ * 手机短信发送方法
  * @author Lycan
  * @time 2017/07/07
  * @param string $tel 电话号码
  * @return array()
  */
-function send_email_verify($tel) {
+function send_tel($tel) {
 	$config = C('TEL_CONFIG');
 	$r = rand(1000, 9999);
 	$result = file_get_contents('http://106.ihuyi.com/webservice/sms.php?method=Submit&account=' . $config['APIID'] . '&password=' . $config['APIKEY'] . '&mobile=' . $tel . '&content=【公司名】您的验证码是：' . $r . '。请不要把验证码泄露给其他人。');
