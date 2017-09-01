@@ -350,6 +350,6 @@ function curl($url = '', $params = '', $method = 'POST', $head = array(), $https
 	}
 	$result = curl_exec($ch); // 开始访问指定URL
 	$result = json_decode($result, true);
-	curl_close($ch); //关闭curl 释放资源
+	curl_close($ch); //关闭curl释放资源
 	return $result;
 }
